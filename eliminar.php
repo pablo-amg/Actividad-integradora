@@ -1,8 +1,9 @@
 <?php 
 
+/* Obtiene la ID de la URL */
 include("conexion.php");
-$id_personaje = $_GET['id'];
+$id_videojuego = $_GET['id'];
 
-mysqli_query($conexion_db, "DELETE FROM personajes WHERE id = '$id_personaje' ");
+mysqli_query($conexion_db, "DELETE FROM videojuegos WHERE id = '$id_videojuego' ");
 
 header("Location: ver.php?mensaje=eliminado");
